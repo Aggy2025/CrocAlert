@@ -507,9 +507,6 @@ La **placa de LED se instala primero** dentro de la carcasa.
 6. Acomodar el cableado.
 7. Confirmar que la placa no interfiera con la posición de la cámara.
 
-![Placa LED instalada](imagenes/montaje-led.jpg)
-
----
 
 # 20. Instalación de la cámara
 
@@ -524,7 +521,6 @@ Después de instalar la placa LED, se instala la cámara.
 5. Verificar que quede centrado.
 6. Acomodar el cableado sin forzar el cable flex.
 7. Confirmar que la placa de LED no bloquee el campo de visión.
-
 
 ---
 
