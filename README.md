@@ -1,7 +1,5 @@
 # Croc Alert – Prototipo 5
 
-![Croc Alert – Prototipo 5](imagenes/components-overview.png)
-
 Guía técnica de **programación, preparación electrónica, soldadura, ensamblaje y puesta en funcionamiento** del Prototipo 5 de Croc Alert.
 
 ---
