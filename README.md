@@ -33,15 +33,15 @@ La iluminación infrarroja es controlada desde la ESP32 mediante la electrónica
 
 ### Circuito general
 
-El siguiente diagrama muestra la conexión general del sistema de iluminación infrarroja y los principales elementos que intervienen en su funcionamiento. Se utiliza como referencia antes de comenzar el proceso de soldadura.
+La siguiente imagen muestra cómo queda el circuito una vez realizadas las conexiones, soldado y ensamblado de todos sus componentes. Esta configuración corresponde al montaje final del sistema **antes de ser instalado dentro del case**, permitiendo visualizar la distribución y conexión de los componentes electrónicos.
 
 ![Circuito general del Prototipo 5](imagenes/componentes-conectados.png)
 
 ---
 
-## 4. Componentes
+## 3. Componentes
 
-### 4.1 Componentes electrónicos
+### 3.1 Componentes electrónicos
 
 | Componente | Función |
 |---|---|
@@ -55,7 +55,7 @@ El siguiente diagrama muestra la conexión general del sistema de iluminación i
 | Cables | Interconexión eléctrica |
 | Tampox | Absorción de humedad dentro de la carcasa |
 
-### 4.2 Componentes mecánicos
+### 3.2 Componentes mecánicos
 
 - Carcasa del Prototipo 5.
 - Soporte de cámara.
@@ -63,27 +63,22 @@ El siguiente diagrama muestra la conexión general del sistema de iluminación i
 - Espacios internos para electrónica y batería.
 - Elementos de fijación.
 
-### 4.3 Vista general de los componentes
+### 3.3 Vista general de los componentes
 
 ![Componentes principales](images/components-overview.png)
 
 ---
 
-## 5. Herramientas necesarias
+## 4. Herramientas necesarias
 
 - Computadora.
 - Cable USB.
 - Módulo programador para ESP32-CAM.
 - Cautín.
 - Estaño.
-- Flux, cuando sea necesario.
-- Multímetro.
-- Pinzas.
-- Destornilladores y herramientas de montaje.
-
 ---
 
-## 6. Reglas importantes antes de comenzar
+## 5. Reglas importantes antes de comenzar
 
 > [!WARNING]
 > **La batería se conecta de último.**
@@ -100,7 +95,7 @@ Antes de energizar el sistema:
 
 ---
 
-# 7. Proceso general
+# 6. Proceso general
 
 El armado completo debe seguir este orden:
 
@@ -142,9 +137,9 @@ El orden físico más importante es:
 
 ---
 
-# 8. Etapa 1 – Preparación de la ESP32-CAM
+# 7. Etapa 1 – Preparación de la ESP32-CAM
 
-## 8.1 Conectar la cámara
+## 7.1 Conectar la cámara
 
 1. Tomar la ESP32-CAM.
 2. Localizar el conector de la cámara.
@@ -153,15 +148,12 @@ El orden físico más importante es:
 5. Cerrar el seguro del conector.
 6. Comprobar que la conexión quede firme.
 
-![ESP32-CAM](images/hardware/esp32-cam.png)
-
-![Cámara](images/hardware/camara.png)
 
 > No forzar el cable flex ni el conector de la cámara.
 
 ---
 
-## 8.2 Colocar la ESP32-CAM en el módulo programador
+## 7.2 Colocar la ESP32-CAM en el módulo programador
 
 La ESP32-CAM se utiliza inicialmente conectada al módulo programador para cargar el firmware y realizar las primeras pruebas.
 
@@ -174,11 +166,11 @@ En esta etapa la ESP32-CAM **todavía no se instala dentro de la carcasa**.
 
 ---
 
-# 9. Programación con PlatformIO
+# 8. Programación con PlatformIO
 
 PlatformIO se puede utilizar como entorno principal para compilar y cargar el programa de la ESP32-CAM.
 
-## 9.1 Preparar el entorno
+## 8.1 Preparar el entorno
 
 1. Instalar Visual Studio Code.
 2. Instalar la extensión PlatformIO IDE.
@@ -186,7 +178,7 @@ PlatformIO se puede utilizar como entorno principal para compilar y cargar el pr
 4. Abrir el proyecto de Croc Alert.
 5. Esperar a que se descarguen o reconozcan las dependencias del proyecto.
 
-## 9.2 Estructura recomendada del proyecto
+## 8.2 Estructura recomendada del proyecto
 
 ```text
 CrocAlert/
@@ -198,7 +190,7 @@ CrocAlert/
 └── README.md
 ```
 
-## 9.3 Revisar `platformio.ini`
+## 8.3 Revisar `platformio.ini`
 
 El archivo `platformio.ini` define la plataforma, la placa y el framework utilizados por el proyecto.
 
@@ -215,7 +207,7 @@ monitor_speed = 115200
 
 > La configuración debe coincidir con el modelo exacto de ESP32-CAM utilizado.
 
-## 9.4 Compilar
+## 8.4 Compilar
 
 Antes de cargar el código:
 
@@ -224,7 +216,7 @@ Antes de cargar el código:
 3. Esperar a que termine la compilación.
 4. Confirmar que no existan errores.
 
-## 9.5 Seleccionar el puerto
+## 8.5 Seleccionar el puerto
 
 Conectar el módulo programador y seleccionar el puerto COM que corresponda a la ESP32-CAM.
 
@@ -238,7 +230,7 @@ COM11
 
 El número cambia según la computadora.
 
-## 9.6 Cargar el programa
+## 8.6 Cargar el programa
 
 Ejecutar:
 
@@ -248,17 +240,17 @@ PlatformIO → Upload
 
 Esperar a que finalice la carga del firmware.
 
-## 9.7 Verificar la carga
+## 8.7 Verificar la carga
 
 Confirmar que el proceso termine sin errores y que la ESP32-CAM pueda iniciar el programa.
 
 ---
 
-# 10. Programación con Arduino IDE
+# 9. Programación con Arduino IDE
 
 Arduino IDE puede utilizarse como alternativa para programar la ESP32-CAM.
 
-## 10.1 Instalar soporte para ESP32
+## 9.1 Instalar soporte para ESP32
 
 1. Abrir Arduino IDE.
 2. Ir a **Archivo → Preferencias**.
@@ -266,7 +258,7 @@ Arduino IDE puede utilizarse como alternativa para programar la ESP32-CAM.
 4. Ir a **Herramientas → Placa → Gestor de tarjetas**.
 5. Buscar e instalar el soporte para ESP32.
 
-## 10.2 Seleccionar la placa
+## 9.2 Seleccionar la placa
 
 Seleccionar la tarjeta correspondiente al hardware utilizado.
 
@@ -276,7 +268,7 @@ En caso de utilizar una AI Thinker ESP32-CAM:
 AI Thinker ESP32-CAM
 ```
 
-## 10.3 Seleccionar el puerto
+## 9.3 Seleccionar el puerto
 
 Ir a:
 
@@ -286,7 +278,7 @@ Herramientas → Puerto
 
 Seleccionar el puerto COM de la ESP32-CAM.
 
-## 10.4 Cargar el código
+## 9.4 Cargar el código
 
 1. Abrir el código del proyecto.
 2. Compilar.
@@ -296,7 +288,7 @@ Seleccionar el puerto COM de la ESP32-CAM.
 
 ---
 
-# 11. Prueba de la ESP32-CAM antes del montaje
+# 10. Prueba de la ESP32-CAM antes del montaje
 
 Antes de continuar con el proceso de soldadura, comprobar:
 
@@ -310,7 +302,7 @@ Antes de continuar con el proceso de soldadura, comprobar:
 
 ---
 
-# 12. Etapa 2 – Desconectar del módulo programador
+# 11. Etapa 2 – Desconectar del módulo programador
 
 Cuando la programación y las pruebas hayan finalizado:
 
@@ -324,80 +316,107 @@ A partir de aquí comienza el ensamblaje definitivo del dispositivo.
 
 ---
 
-# 13. Etapa 3 – Soldadura de todos los componentes
+# 12. Etapa 3 – Soldadura de todos los componentes
 
 ## Regla principal
 
 > **TODAS las conexiones deben quedar preparadas y soldadas antes de introducir los componentes dentro de la carcasa.**
 
-La soldadura no debe realizarse con la batería conectada.
 
 El objetivo de esta etapa es dejar listo el sistema electrónico completo antes de comenzar el montaje físico.
 
 ---
 
-# 14. Placa de LED infrarrojos
+# 13. Placa de LED infrarrojos
 
-La placa de iluminación está diseñada para integrar **24 LED infrarrojos de 850 nm**.
+La placa de iluminación está diseñada para integrar **24 LED infrarrojos de 850 nm**. Para su funcionamiento, la placa cuenta con tres puntos de conexión que permiten conectarla directamente con la placa temporizadora.
 
-![Placa de LED infrarrojos](images/hardware/placa-led.png)
+![Placa de LED infrarrojos](imagenes/placa-led.png)
 
-## 14.1 Preparación
+## 13.1 Puntos de conexión
+
+La placa de LED infrarrojos dispone de tres puntos de conexión identificados como:
+
+- **GND:** conexión a tierra.
+- **BAT:** alimentación proveniente de la batería.
+- **TRI:** señal de activación de la iluminación.
+
+Estos tres puntos deben conectarse a los respectivos puntos de la **placa temporizadora**.
+
+La correspondencia de las conexiones es la siguiente:
+
+| Placa de LED | Placa temporizadora |
+|---|---|
+| **GND** | **GND** |
+| **BAT** | **VCC** |
+| **TRI** | **GPIO13** |
+
+De esta manera, la placa temporizadora proporciona la alimentación y la señal de control necesarias para activar la iluminación infrarroja.
+
+## 13.2 Preparación
 
 1. Colocar la placa sobre una superficie estable.
-2. Identificar sus puntos de conexión.
-3. Preparar los cables de acuerdo con el esquema del proyecto.
-4. Pelar los extremos.
-5. Estañar los cables.
+2. Identificar los tres puntos de conexión: **GND, BAT y TRI**.
+3. Preparar tres cables de conexión.
+4. Pelar los extremos de los cables.
+5. Estañar los extremos de los cables y los puntos de soldadura cuando sea necesario.
 
-## 14.2 Soldadura
+## 13.3 Soldadura
 
-1. Colocar cada cable en su punto correspondiente.
-2. Realizar la soldadura.
-3. Dejar enfriar la unión.
-4. Revisar visualmente.
-5. Repetir para las conexiones restantes.
-
-## 14.3 Verificación
-
-Comprobar:
-
-- Soldaduras firmes.
-- Ausencia de puentes de estaño.
-- Continuidad.
-- Polaridad correcta.
-
-> Los puntos exactos de conexión deben coincidir con el esquema eléctrico utilizado por el proyecto. No asumir conexiones únicamente por la apariencia de la placa.
+1. Colocar el cable correspondiente en cada punto de conexión.
+2. Soldar **GND de la placa de LED con GND de la placa temporizadora**.
+3. Soldar **BAT de la placa de LED con VCC de la placa temporizadora**.
+4. Soldar **TRI de la placa de LED con GPIO13 de la placa temporizadora**.
+5. Dejar enfriar las uniones.
+6. Revisar visualmente cada soldadura.
+7. Verificar que no existan puentes de estaño ni conexiones sueltas.
 
 ---
 
-# 15. Placa CRCibernetica
+# 14. Placa temporizadora
 
-La placa CRCibernetica forma parte del sistema de control e integración electrónica.
+La placa temporizadora forma parte del sistema de control e integración electrónica. En el **Prototipo 5** se utiliza una versión modificada de esta placa para incorporar una interfaz lógica que permite controlar la iluminación infrarroja desde la **ESP32**.
 
-En el Prototipo 5 se utiliza una versión modificada de la placa temporizadora para incorporar una interfaz lógica que permite controlar la iluminación desde la ESP32.
+![Placa CRCibernetica](imagenes/placa-crcibernetica.png)
 
-![Placa CRCibernetica](images/hardware/placa-crcibernetica.png)
+## 14.1 Identificación de las conexiones
 
-## 15.1 Identificación visual
+La placa temporizadora dispone de diferentes puntos de conexión para alimentación, tierra y señal de control. Para la conexión con la placa de LED infrarrojos se utilizan:
 
-La placa muestra puntos y conectores identificados para señales y alimentación. Entre las etiquetas visibles se encuentran:
+- **GND:** conexión a tierra.
+- **VCC:** alimentación.
+- **GPIO13:** señal de control proveniente de la ESP32.
 
-- `GND`
-- `Vcc`
-- `GPIO13`
-- `GPIO3`
-- `GPIO1`
-- `LED Enable`
-- `Trim Enable`
+La conexión con la placa de LED se realiza de la siguiente manera:
 
-## 15.2 Preparación
+| Placa temporizadora | Placa de LED |
+|---|---|
+| **GND** | **GND** |
+| **VCC** | **BAT** |
+| **GPIO13** | **TRI** |
 
-1. Identificar las conexiones necesarias según el esquema eléctrico.
-2. Preparar los cables.
-3. Pelar los extremos.
-4. Estañar los cables.
+## 14.2 Preparación
 
+1. Identificar los puntos **GND, VCC y GPIO13** de la placa temporizadora.
+2. Preparar los tres cables que conectarán ambas placas.
+3. Pelar los extremos de los cables.
+4. Estañar los extremos para facilitar la soldadura.
+5. Verificar que cada cable corresponda al punto de conexión indicado en el esquema.
+
+## 14.3 Conexión entre las placas
+
+La conexión final entre ambas placas queda establecida de la siguiente forma:
+
+**Placa de LED → Placa temporizadora**
+
+- `GND → GND`
+- `BAT → VCC`
+- `TRI → GPIO13`
+
+La señal conectada a **GPIO13** permite que la ESP32 controle la activación de la iluminación infrarroja mediante la placa temporizadora.
+
+> **Importante:** Antes de alimentar el circuito, verificar cuidadosamente la correspondencia de los tres cables para evitar invertir las conexiones de alimentación o señal.
+> 
 ## 15.3 Soldadura
 
 1. Colocar cada cable en el punto correspondiente.
@@ -409,31 +428,12 @@ La placa muestra puntos y conectores identificados para señales y alimentación
 ## 15.4 Verificación
 
 Comprobar:
-
-- Continuidad.
-- Polaridad.
 - Soldaduras firmes.
 - Ausencia de cortocircuitos.
 
 > Las conexiones definitivas deben seguir el esquema eléctrico del prototipo y no deben inferirse únicamente a partir de las etiquetas visibles.
 
 ---
-
-# 16. Conexiones entre los módulos
-
-Una vez preparadas las placas, se realizan las conexiones entre ellas.
-
-```text
-ESP32-CAM
-    │
-    │ señal / control
-    ▼
-CRCibernetica
-    │
-    │ control de iluminación
-    ▼
-Placa de LED IR
-```
 
 ## Procedimiento para cada cable
 
@@ -448,7 +448,7 @@ Placa de LED IR
 
 ---
 
-# 17. Inspección electrónica antes del montaje
+# 16. Inspección electrónica antes del montaje
 
 Antes de introducir cualquier componente en la carcasa:
 
@@ -459,20 +459,8 @@ Antes de introducir cualquier componente en la carcasa:
 - Buscar cables sueltos.
 - Confirmar que no haya componentes dañados.
 
-### Prueba eléctrica
 
-Con un multímetro comprobar:
-
-- Continuidad.
-- Polaridad.
-- Posibles cortocircuitos.
-- Integridad de las conexiones.
-
-> **La batería continúa desconectada.**
-
----
-
-# 18. Etapa 4 – Preparación de la carcasa
+# 17. Etapa 4 – Preparación de la carcasa
 
 Antes de instalar los componentes:
 
