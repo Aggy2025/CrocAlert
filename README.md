@@ -677,7 +677,7 @@ Verificar que los LED infrarrojos se activen correctamente y que la cámara pued
 
 ---
 
-# 30. Solución de problemas
+# 29. Solución de problemas
 
 ## La ESP32-CAM no programa
 
@@ -715,7 +715,6 @@ Verificar que los LED infrarrojos se activen correctamente y que la cámara pued
 - Baterías.
 - Polaridad.
 - Soldaduras.
-- Continuidad.
 - Posibles cortocircuitos.
 
 ## La carcasa no cierra correctamente
@@ -730,7 +729,7 @@ Verificar que los LED infrarrojos se activen correctamente y que la cámara pued
 
 ---
 
-# 31. Checklist de armado
+# 30. Checklist de armado
 
 ## Programación
 
@@ -773,5 +772,4 @@ Verificar que los LED infrarrojos se activen correctamente y que la cámara pued
 - [ ] Prueba con poca iluminación.
 - [ ] Prueba nocturna.
 - [ ] Prueba final completa.
-
 ---
