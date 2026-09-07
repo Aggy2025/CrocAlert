@@ -30,29 +30,6 @@ El desarrollo de esta versión busca:
 
 ---
 
-## 3. Arquitectura general
-
-```text
-                       ┌───────────────────┐
-                       │     ESP32-CAM     │
-                       └─────────┬─────────┘
-                                 │
-                                 │ Control / lógica
-                                 │
-                ┌────────────────▼────────────────┐
-                │       Placa CRCibernetica      │
-                └────────────────┬────────────────┘
-                                 │
-                                 │ Señal de control
-                                 ▼
-                ┌────────────────────────────────┐
-                │    Placa de 24 LED IR 850 nm   │
-                └────────────────────────────────┘
-
-ESP32-CAM ───────────────────────► Cámara
-
-Batería ────────────────────────► Sistema de alimentación
-```
 
 La iluminación infrarroja es controlada desde la ESP32 mediante la electrónica de control del prototipo.
 
@@ -60,7 +37,7 @@ La iluminación infrarroja es controlada desde la ESP32 mediante la electrónica
 
 El siguiente diagrama muestra la conexión general del sistema de iluminación infrarroja y los principales elementos que intervienen en su funcionamiento. Se utiliza como referencia antes de comenzar el proceso de soldadura.
 
-![Circuito general del Prototipo 5](images/circuito-general.png)
+![Circuito general del Prototipo 5](imagenes/componentes-conectados.png)
 
 ---
 
@@ -508,7 +485,7 @@ Antes de instalar los componentes:
 5. Identificar la posición de la cámara.
 6. Identificar el espacio destinado para la alimentación.
 
-![Modelo de carcasa](images/assembly/case-modelo.png)
+![Modelo de carcasa](imagenes/case-modelo.png)
 
 ---
 
@@ -544,7 +521,7 @@ La **placa de LED se instala primero** dentro de la carcasa.
 6. Acomodar el cableado.
 7. Confirmar que la placa no interfiera con la posición de la cámara.
 
-![Placa LED instalada](images/assembly/montaje-led.jpg)
+![Placa LED instalada](imagenes/montaje-led.jpg)
 
 ---
 
@@ -562,29 +539,15 @@ Después de instalar la placa LED, se instala la cámara.
 6. Acomodar el cableado sin forzar el cable flex.
 7. Confirmar que la placa de LED no bloquee el campo de visión.
 
-![ESP32-CAM](images/hardware/esp32-cam.png)
+![ESP32-CAM](imagenes/esp32-cam.png)
 
 ---
 
 # 22. Vista interna del ensamblaje
 
-La fotografía interna final debe utilizarse como referencia para comprobar la distribución de todos los componentes antes del cierre.
+![Interior](imagenes/interior-prototipo5.png)
 
-> **Agregar aquí la fotografía real del interior completamente ensamblado.**
->
-> Archivo recomendado: `images/assembly/interior-prototipo5.jpg`
 
-La imagen debe mostrar, en la medida de lo posible:
-
-- Placa de LED.
-- Cámara.
-- ESP32-CAM.
-- Placa CRCibernetica.
-- Cableado.
-- Espacio de batería.
-- Ubicación del Tampox.
-
----
 
 # 23. Instalación del Tampox
 
@@ -620,18 +583,15 @@ Antes de conectar la batería deben cumplirse todas estas condiciones:
 - La placa LED está instalada.
 - La cámara está instalada.
 - El Tampox está colocado.
-- No existen cortocircuitos.
-- La polaridad fue comprobada.
+
 
 ## Procedimiento
 
 1. Colocar la batería en su posición.
 2. Acomodar el cableado.
-3. Revisar nuevamente la polaridad.
-4. Conectar la batería.
+3. Conectar la batería.
 5. Confirmar el encendido del sistema.
 
-![Batería](images/hardware/bateria-10000mah.png)
 
 ---
 
@@ -700,7 +660,7 @@ Una vez completada la lista:
 
 La siguiente fotografía debe mostrar el Prototipo 5 completamente ensamblado.
 
-![Prototipo 5](images/assembly/prototipo-frontal.png)
+![Prototipo 5](imagenes/prototipo-frontal.png)
 
 > Esta imagen se utiliza como referencia visual del resultado final del ensamblaje.
 
@@ -733,24 +693,6 @@ Realizar pruebas con:
 - Oscuridad.
 
 Verificar que los LED infrarrojos se activen correctamente y que la cámara pueda capturar la escena.
-
----
-
-# 29. Evidencia de pruebas
-
-## Prueba nocturna
-
-![Prueba nocturna 1](images/tests/prueba-nocturna-1.png)
-
-![Prueba nocturna 2](images/tests/prueba-nocturna-2.png)
-
-## Prueba diurna
-
-![Prueba diurna 1](images/tests/prueba-diurna-1.png)
-
-![Prueba diurna 2](images/tests/prueba-diurna-2.png)
-
-La documentación del proyecto registra pruebas del prototipo a diferentes distancias, incluyendo 3 m y 7 m.
 
 ---
 
@@ -852,105 +794,3 @@ La documentación del proyecto registra pruebas del prototipo a diferentes dista
 - [ ] Prueba final completa.
 
 ---
-
-# 32. Estructura recomendada del repositorio
-
-```text
-Croc-Alert/
-│
-├── README.md
-│
-├── code/
-│   ├── platformio/
-│   │   ├── platformio.ini
-│   │   ├── src/
-│   │   │   └── main.cpp
-│   │   ├── include/
-│   │   └── lib/
-│   │
-│   └── arduino/
-│       └── CrocAlert.ino
-│
-├── images/
-│   ├── components-overview.png
-│   │
-│   ├── hardware/
-│   │   ├── placa-led.png
-│   │   ├── placa-crcibernetica.png
-│   │   ├── esp32-cam.png
-│   │   ├── camara.png
-│   │   └── bateria-10000mah.png
-│   │
-│   ├── assembly/
-│   │   ├── case-modelo.png
-│   │   ├── montaje-led.jpg
-│   │   ├── interior-prototipo5.jpg
-│   │   └── prototipo-frontal.png
-│   │
-│   └── tests/
-│       ├── prueba-nocturna-1.png
-│       ├── prueba-nocturna-2.png
-│       ├── prueba-diurna-1.png
-│       └── prueba-diurna-2.png
-│
-└── docs/
-```
-
----
-
-# 33. Galería
-
-## Componentes
-
-![Componentes](images/components-overview.png)
-
-## Placa LED
-
-![Placa LED](images/hardware/placa-led.png)
-
-## Placa CRCibernetica
-
-![CRCibernetica](images/hardware/placa-crcibernetica.png)
-
-## ESP32-CAM
-
-![ESP32-CAM](images/hardware/esp32-cam.png)
-
-## Cámara
-
-![Cámara](images/hardware/camara.png)
-
-## Carcasa
-
-![Carcasa](images/assembly/case-modelo.png)
-
-## Prototipo ensamblado
-
-![Prototipo](images/assembly/prototipo-frontal.png)
-
----
-
-# 34. Equipo de trabajo
-
-**Universidad CENFOTEC**
-
-- Jorge Ortega Badilla
-- Fiorella Pérez
-- Pablo Hernandez
-- Danny Arias
-- Gabriela Urbina
-
----
-
-# 35. Nota de mantenimiento y documentación
-
-Cuando se modifique el hardware o el software del Prototipo 5, actualizar:
-
-- El código en `code/`.
-- La descripción de conexiones.
-- Las fotografías del ensamblaje.
-- La lista de materiales.
-- El procedimiento de programación.
-- Las pruebas realizadas.
-
-Esto permite que futuras personas puedan reproducir y mantener el prototipo sin depender únicamente de información oral o de la presentación del proyecto.
