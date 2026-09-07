@@ -65,7 +65,7 @@ La siguiente imagen muestra cómo queda el circuito una vez realizadas las conex
 
 ### 3.3 Vista general de los componentes
 
-![Componentes principales](images/components-overview.png)
+![Componentes principales](imagenes/components-overview.png)
 
 ---
 
@@ -475,7 +475,7 @@ Antes de instalar los componentes:
 
 ---
 
-# 19. Orden de instalación dentro del case
+# 18. Orden de instalación dentro del case
 
 El orden físico obligatorio es:
 
@@ -493,7 +493,7 @@ No cambiar este orden durante el ensamblaje.
 
 ---
 
-# 20. Instalación de la placa de LED
+# 19. Instalación de la placa de LED
 
 La **placa de LED se instala primero** dentro de la carcasa.
 
@@ -511,7 +511,7 @@ La **placa de LED se instala primero** dentro de la carcasa.
 
 ---
 
-# 21. Instalación de la cámara
+# 20. Instalación de la cámara
 
 Después de instalar la placa LED, se instala la cámara.
 
@@ -525,17 +525,16 @@ Después de instalar la placa LED, se instala la cámara.
 6. Acomodar el cableado sin forzar el cable flex.
 7. Confirmar que la placa de LED no bloquee el campo de visión.
 
-![ESP32-CAM](imagenes/esp32-cam.png)
 
 ---
 
-# 22. Vista interna del ensamblaje
+# 21. Vista interna del ensamblaje
 
 ![Interior](imagenes/interior-prototipo5.png)
 
 
 
-# 23. Instalación del Tampox
+# 22. Instalación del Tampox
 
 Antes de cerrar la carcasa se coloca el material absorbente de humedad.
 
@@ -556,7 +555,7 @@ El **Tampox** se utilizará dentro del case para ayudar a absorber la humedad ac
 
 ---
 
-# 24. Conexión de la batería
+# 23. Conexión de la batería
 
 ## ⚠️ LA BATERÍA SE CONECTA DE ÚLTIMO
 
@@ -581,7 +580,7 @@ Antes de conectar la batería deben cumplirse todas estas condiciones:
 
 ---
 
-# 25. Organización interna final
+# 24. Organización interna final
 
 Antes de cerrar la carcasa verificar:
 
@@ -615,7 +614,7 @@ Antes de cerrar la carcasa verificar:
 
 ---
 
-# 26. Cierre de la carcasa
+# 25. Cierre de la carcasa
 
 Antes de cerrar:
 
