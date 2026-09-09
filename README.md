@@ -643,7 +643,10 @@ Las siguientes fotografías muestran el Prototipo 5 completamente ensamblado.
 
 ![Prototipo 5](imagenes/prototipo-frontal.jpg)
 
+---
 ![Prototipo 5](imagenes/case-lado.png)
+![Prototipo 5](imagenes/case-posterior.png)
+
 
 
 
