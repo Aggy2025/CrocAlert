@@ -638,17 +638,14 @@ Una vez completada la lista:
 
 ---
 
+
 # 27. Resultado final
 
 Las siguientes fotografías muestran el Prototipo 5 completamente ensamblado.
 
-![Prototipo 5](imagenes/prototipo-frontal.jpg)
-
----
-![Prototipo 5](imagenes/case-lado.png)
-![Prototipo 5](imagenes/case-posterior.png)
-
-
+| Vista 1 | Vista 2 | Vista 3 | Vista 4 |
+|:---:|:---:|:---:|:---:|
+| ![Prototipo 5](imagenes/prototipo-frontal.jpg) | ![Interior](imagenes/interior-prototipo5.png) | ![Vista lateral](imagenes/case-lado.png) | ![Vista posterior](imagenes/case-posterior.png) |
 
 
 > Estas imagenes se utilizan como referencia visual del resultado final del ensamblaje.
