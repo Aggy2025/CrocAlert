@@ -470,11 +470,10 @@ Antes de instalar los componentes:
 4. Identificar la posición de la placa de LED.
 5. Identificar la posición de la cámara.
 6. Identificar el espacio destinado para la alimentación.
-
-![Modelo de carcasa](imagenes/case01.png)
-![Modelo de carcasa](imagenes/case02.png)
-![Modelo de carcasa](imagenes/case03.png)
-
+   
+| Vista 1 | Vista 2 | Vista 3 |
+|:---:|:---:|:---:|
+| ![Modelo de carcasa](imagenes/case01.png) | ![Modelo de carcasa](imagenes/case02.png) | ![Modelo de carcasa](imagenes/case03.png) |
 ---
 
 # 18. Orden de instalación dentro del case
