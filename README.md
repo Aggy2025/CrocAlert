@@ -642,7 +642,7 @@ Una vez completada la lista:
 La siguiente fotografía debe mostrar el Prototipo 5 completamente ensamblado.
 
 ![Prototipo 5](imagenes/case-lado.png)
-![Prototipo 5](imagenes/prototipo-frontal.png)
+![Prototipo 5](imagenes/prototipo-frontal.jpg)
 
 
 > Esta imagen se utiliza como referencia visual del resultado final del ensamblaje.
